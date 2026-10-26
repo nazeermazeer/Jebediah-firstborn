@@ -33,7 +33,7 @@ class JebediahFirstborn:
                 ret, frame = self.video.read()
                 
                 if not ret:
-                    RuntimeError("Failed to grab a frame.")
+                    raise RuntimeError("Failed to grab a frame.")
                         
                 success, bbox = self.tracker.update(frame)
 
