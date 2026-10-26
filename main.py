@@ -40,6 +40,7 @@ class JebediahFirstborn:
                 x, y, w, h = map(int, bbox)
                 cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
                 cv2.putText(frame, "Tracker: KCF", (75, 50), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+                cv2.putText(frame, f"({x}, {y})", (75, 75), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
 
                 cv2.imshow('Live Camera Feed', frame)
                 
