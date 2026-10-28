@@ -1,6 +1,9 @@
+#include <opencv2/core.hpp>
 #include <iostream>
 
 int main() {
-    std::cout << "hello world!\n";
+    std::cout << "OpenCV version: "
+              << CV_VERSION << '\n';
+
     return 0;
 }

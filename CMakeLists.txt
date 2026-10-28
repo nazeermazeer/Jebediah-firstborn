@@ -1,10 +1,20 @@
 cmake_minimum_required(VERSION 3.20)
 
-project(MyCppProject VERSION 1.0 LANGUAGES CXX)
+project(OpenCVProject LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(MyCppProject
+find_package(OpenCV REQUIRED COMPONENTS core highgui)
+
+add_executable(OpenCVProject
     src/main.cpp
+)
+
+target_link_libraries(OpenCVProject
+    PRIVATE ${OpenCV_LIBS}
+)
+
+target_include_directories(OpenCVProject
+    PRIVATE ${OpenCV_INCLUDE_DIRS}
 )
