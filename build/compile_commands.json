@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/Users/nazeer/Documents/Repositories/Jebediah-firstborn/build",
-  "command": "/usr/bin/clang++ -g -std=gnu++20 -arch arm64 -o CMakeFiles/MyCppProject.dir/src/main.cpp.o -c /Users/nazeer/Documents/Repositories/Jebediah-firstborn/src/main.cpp",
-  "file": "/Users/nazeer/Documents/Repositories/Jebediah-firstborn/src/main.cpp",
-  "output": "/Users/nazeer/Documents/Repositories/Jebediah-firstborn/build/CMakeFiles/MyCppProject.dir/src/main.cpp.o"
-}
-]
