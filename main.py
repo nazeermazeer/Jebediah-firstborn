@@ -35,7 +35,7 @@ class JebediahFirstborn:
                 if not ret:
                     raise RuntimeError("Failed to grab a frame.")
                         
-                success, bbox = self.tracker.update(frame)
+                _, bbox = self.tracker.update(frame)
 
                 x, y, w, h = map(int, bbox)
                 cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
