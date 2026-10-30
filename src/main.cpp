@@ -46,7 +46,7 @@ int main() {
         bool success = tracker->update(frame, roi);
 
         cv::rectangle(frame, roi, cv::Scalar(0, 255, 0), 2);
-        cv::putText(frame, "Tracker: KCF", cv::Point(75, 50), cv::FONT_HERSHEY_SIMPLEX, 0.7, cv::Scalar(0, 255, 0), 2);
+        cv::putText(frame, "Tracker: CSRT", cv::Point(75, 50), cv::FONT_HERSHEY_SIMPLEX, 0.7, cv::Scalar(0, 255, 0), 2);
 
         std::ostringstream oss;
         oss << "(" << roi.x << ", " << roi.y << ")";
