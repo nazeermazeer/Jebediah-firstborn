@@ -1,1 +1,84 @@
-build/
+# ==========================================
+# Prerequisites & Build Artifacts
+# ==========================================
+*.d
+*.slo
+*.lo
+*.o
+*.obj
+*.gch
+*.pch
+
+# Linker & Debugger Files
+*.ilk
+*.pdb
+*.dwo
+*.idb
+*.suo
+
+# Compiled Dynamic & Static Libraries
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
+*.la
+*.lai
+
+# Executables
+*.exe
+*.out
+*.app
+
+# ==========================================
+# Build Directories & Tooling
+# ==========================================
+# Common build directory patterns
+[Bb]uild/
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+[Xx]64/
+[Xx]86/
+[Dd]ebug/
+[Rr]elease/
+
+# CMake output
+CMakeCache.txt
+CMakeFiles/
+CMakeSettings.json
+CMakeUserPresets.json
+CTestTestfile.cmake
+Makefile
+cmake_install.cmake
+compile_commands.json
+
+# ==========================================
+# Dependency Managers & Package Caches
+# ==========================================
+vcpkg_installed/
+.cpm-cache/
+.conan/
+
+# ==========================================
+# IDEs & Text Editors
+# ==========================================
+# Visual Studio
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# CLion / IntelliJ
+.idea/
+cmake-build-*/
+
+# Xcode
+*.xccheckout
+*.xcworkspace
