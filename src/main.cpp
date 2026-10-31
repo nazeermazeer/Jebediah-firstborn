@@ -45,14 +45,17 @@ int main() {
 
         bool success = tracker->update(frame, roi);
 
-        cv::rectangle(frame, roi, cv::Scalar(0, 255, 0), 2);
-        cv::putText(frame, "Tracker: CSRT", cv::Point(75, 50), cv::FONT_HERSHEY_SIMPLEX, 0.7, cv::Scalar(0, 255, 0), 2);
+        if (success) {
+            cv::rectangle(frame, roi, cv::Scalar(0, 255, 0), 2);
+            cv::putText(frame, "Tracker: CSRT", cv::Point(75, 50), cv::FONT_HERSHEY_SIMPLEX, 0.7, cv::Scalar(0, 255, 0), 2);
 
-        std::ostringstream oss;
-        oss << "(" << roi.x << ", " << roi.y << ")";
+            std::ostringstream oss;
+            oss << "(" << roi.x << ", " << roi.y << ")";
 
-        cv::putText(frame, oss.str(), cv::Point(75, 75), cv::FONT_HERSHEY_SIMPLEX, 0.7, cv::Scalar(0, 255, 0), 2);
-
+            cv::putText(frame, oss.str(), cv::Point(75, 75), cv::FONT_HERSHEY_SIMPLEX, 0.7, cv::Scalar(0, 255, 0), 2);
+        } else {
+            cv::putText(frame, "Failing Tracking", cv::Point(75, 50), cv::FONT_HERSHEY_SIMPLEX, 0.7, cv::Scalar(0, 0, 255), 2);
+        }
         cv::imshow("Live Camera Feed", frame);
 
         // macOS Virtual Key Code 12 = Q
